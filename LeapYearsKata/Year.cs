@@ -1,8 +1,8 @@
 ﻿namespace LeapYearsKata;
 
-public class LeapYearCalculator
+public class Year
 {
-    public static bool IsLeapYear(uint year)
+    public static bool IsLeap(uint year)
     {
         return IsDivisibleBy4(year) && (IsDivisibleBy100(year) is false || IsDivisibleBy400(year));
     }

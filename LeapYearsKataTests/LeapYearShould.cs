@@ -14,7 +14,7 @@ public class LeapYearShould
     [InlineData(2000)]
     public void ReturnTrueWhenYearIsLeapYear(uint year)
     {
-        var result = LeapYearCalculator.IsLeapYear(year);
+        var result = Year.IsLeap(year);
 
         result.Should().BeTrue();
     }
@@ -29,7 +29,7 @@ public class LeapYearShould
     [InlineData(2001)]
     public void ReturnFalseWhenYearIsNotLeapYear(uint year)
     {
-        var result = LeapYearCalculator.IsLeapYear(year);
+        var result = Year.IsLeap(year);
 
         result.Should().BeFalse();
     }
