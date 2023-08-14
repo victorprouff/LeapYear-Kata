@@ -23,6 +23,7 @@ public class LeapYearShould
     [InlineData(1807)]
     [InlineData(1809)]
     [InlineData(1800)]
+    [InlineData(1900)]
     public void ReturnFalseWhenYearIsNotLeapYear(uint year)
     {
         var result = LeapYearCalculator.IsLeapYear(year);

@@ -4,11 +4,13 @@ public class LeapYearCalculator
 {
     public static bool IsLeapYear(uint year)
     {
-        if ((year % 4 == 0) && (year % 100 != 0))
+        if (IsDivisibleBy4(year) && (year % 100 != 0))
         {
             return true;
         }
 
         return false;
     }
+
+    private static bool IsDivisibleBy4(uint year) => (year % 4 == 0);
 }
