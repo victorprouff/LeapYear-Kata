@@ -1,6 +1,6 @@
 ﻿namespace LeapYearsKata;
 
-public class LeapYear
+public class LeapYearCalculator
 {
     public bool IsLeapYear(uint year)
     {
