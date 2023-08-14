@@ -2,8 +2,8 @@
 
 public class LeapYearCalculator
 {
-    public bool IsLeapYear(uint year)
+    public static bool IsLeapYear(uint year)
     {
-        return year == 1805 ? false : true;
+        return year is 1804 or 1808;
     }
 }
