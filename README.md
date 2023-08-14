@@ -1,5 +1,8 @@
 # LeapYear Kata
-## description
+
+[Original Instruction](https://github.com/cleancodedojo/leap-years-kata)
+
+## Description
 
 - Nearly every four years is a leap year which has 366 days, as opposed to a common year, which has 365 in the Gregorian Calendar.
 - Leap years are needed to keep our modern day Gregorian calendar in alignment with the Earth's revolutions around the sun.
