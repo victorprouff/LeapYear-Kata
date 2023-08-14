@@ -16,11 +16,13 @@ public class LeapYearShould
         result.Should().BeTrue();
     }
 
-    [Fact]
-    public void ReturnFalseWhenYearIs1805()
+    [Theory]
+    [InlineData(1805)]
+    [InlineData(1806)]
+    public void ReturnFalseWhenYearIsNotLeapYear(uint year)
     {
         var leapYear = new LeapYearCalculator();
-        var result = leapYear.IsLeapYear(1805);
+        var result = leapYear.IsLeapYear(year);
 
         result.Should().BeFalse();
     }
