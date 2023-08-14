@@ -5,11 +5,13 @@ namespace LeapYearsKataTests;
 
 public class LeapYearShould
 {
-    [Fact]
-    public void ReturnTrueWhenYearIs1804()
+    [Theory]
+    [InlineData(1804)]
+    [InlineData(1808)]
+    public void ReturnTrueWhenYearIsLeapYear(uint year)
     {
         var leapYear = new LeapYearCalculator();
-        var result = leapYear.IsLeapYear(1804);
+        var result = leapYear.IsLeapYear(year);
 
         result.Should().BeTrue();
     }
