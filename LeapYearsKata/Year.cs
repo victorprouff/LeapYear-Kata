@@ -1,13 +1,11 @@
 ﻿namespace LeapYearsKata;
 
-public class Year
+public static class Year
 {
     public static bool IsLeap(uint year)
     {
-        return IsDivisibleBy4(year) && (IsDivisibleBy100(year) is false || IsDivisibleBy400(year));
+        return year.IsDivisibleBy(4) && (year.IsDivisibleBy(100) is false || year.IsDivisibleBy(400));
     }
 
-    private static bool IsDivisibleBy400(uint year) => (year % 400 == 0);
-    private static bool IsDivisibleBy100(uint year) => (year % 100 == 0);
-    private static bool IsDivisibleBy4(uint year) => (year % 4 == 0);
+    private static bool IsDivisibleBy(this uint year, uint modulo) => year % modulo == 0;
 }
